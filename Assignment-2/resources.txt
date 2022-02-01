@@ -1,0 +1,3 @@
+1: A directory is a folder that's used to organize files
+2: VCS allows one to look back on previous changes and revert to those changes if need be
+3: Printmaking is probably my favorite, I've taken a lot of printmaking classes here so far and really enjoyed the more technical aspect of creating prints!
