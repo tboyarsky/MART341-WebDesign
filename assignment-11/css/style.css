@@ -1,0 +1,38 @@
+body {
+  background-color: #7d6957;
+  font-family: Chelsea;
+  text-align: center;
+}
+
+div {
+  border: 10px solid #664529;
+  display: inline-block;
+  color: #664529
+}
+
+
+.imagebox {
+  background-color: #EA9F5E;
+  border: 25px solid #664529;
+}
+
+#headertext:hover {
+  color: #8B4513
+}
+
+#image:hover {
+  border: 25px solid #EA9F5E;
+}
+
+#title {
+  background-color: #664529;
+  font-family: Nougat;
+  font-size: 35px;
+  color: #E6C1A1
+}
+
+#infobox {
+  background-color: #664529;
+  font-size: 15px;
+  color: #E6C1A1
+}

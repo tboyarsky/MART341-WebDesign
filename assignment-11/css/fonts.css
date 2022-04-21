@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Chelsea';
+  src: url('../fonts/Chelsea.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nougat';
+  src: url('../fonts/Nougat-ExtraBlack.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
