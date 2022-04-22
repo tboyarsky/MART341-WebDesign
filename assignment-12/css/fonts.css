@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'TypoGrotesk';
+  src: url('../fonts/TypoGroteskBlack.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TypoGrotesk';
+  src: url('../fonts/TypoGroteskBold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TypoGrotesk';
+  src: url('../fonts/TypoGrotesk.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TypoGrotesk';
+  src: url('../fonts/TypoGroteskThin.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'mdgrotesque';
+  src: url('../fonts/mdgrotesque.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
