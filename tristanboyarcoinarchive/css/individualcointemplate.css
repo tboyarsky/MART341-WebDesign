@@ -64,13 +64,25 @@ header {
     color: #1D8C83;
 }
 
-.grid-container {
+@media only screen and (max-width: 768px){
+  .grid-container {
+    display: inline-grid;
+    grid-template-columns: auto;
+    background-color: #F9F8ED;
+    font-family: Helvetica;
+    text-align: left;
+    margin-left: -3%;
+  }
+}
+@media only screen and (min-width: 768px){
+  .grid-container {
   display: inline-grid;
   grid-template-columns: 30% 70%;
   background-color: #F9F8ED;
   font-family: Helvetica;
   text-align: left;
   margin-left: -3%;
+}
 }
 
 .grid-item {
