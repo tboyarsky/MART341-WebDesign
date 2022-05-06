@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <title>
+      Tristan Boyar Coin Archive
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Tristan Boyar Coin Archive">
+    <meta name="author" content="Tristan Boyar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style-lookup.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("Input");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("CountryTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("CountryTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+  </head>
+
+  <body>
+
+        <div class="sortandsearch">
+        <p><button onclick="sortTable()">Sort</button></p>
+
+        <input type="text" id="Input" onkeyup="myFunction()" placeholder="Search..." title="Country Name">
+        </div>
+
+  <table id="CountryTable">
+    <tr class="header">
+      <th style="width:60%;">Country</th>
+      <th style="width:40%;">Country Code</th>
+    </tr>
+<tr><td>Argentina</td><td>AR</td></tr>
+<tr><td>Austria</td><td>AT</td></tr>
+<tr><td>Australia</td><td>AU</td></tr>
+<tr><td>Belgium</td><td>BE</td></tr>
+<tr><td>Bolivia (Plurinational State of)</td><td>BO</td></tr>
+<tr><td>Brazil</td><td>BR</td></tr>
+<tr><td>Canada</td><td>CA</td></tr>
+<tr><td>Colombia</td><td>CO</td></tr>
+<tr><td>Cuba</td><td>CU</td></tr>
+<tr><td>Germany</td><td>DE</td></tr>
+<tr><td>Spain</td><td>ES</td></tr>
+<tr><td>Spanish Colonies</td><td>ES-COL</td></tr>
+<tr><td>France</td><td>FR</td></tr>
+<tr><td>French Colonies</td><td>FR-COL</td></tr>
+<tr><td>United Kingdom of Great Britain and Northern Ireland</td><td>GB</td></tr>
+<tr><td>British Colonies</td><td>GB-COL</td></tr>
+<tr><td>Guatemala</td><td>GT</td></tr>
+<tr><td>Ireland</td><td>IE</td></tr>
+<tr><td>India</td><td>IN</td></tr>
+<tr><td>Iran (Islamic Republic of)</td><td>IR</td></tr>
+<tr><td>Italy</td><td>IT</td></tr>
+<tr><td>Luxembourg</td><td>LU</td></tr>
+<tr><td>Mexico</td><td>MX</td></tr>
+<tr><td>Ottoman Empire</td><td>OTT</td></tr>
+<tr><td>Peru</td><td>PE</td></tr>
+<tr><td>Sweden</td><td>SE</td></tr>
+<tr><td>United States of America</td><td>US</td></tr>
+
+    </table>
+
+      </body>
+      </html>

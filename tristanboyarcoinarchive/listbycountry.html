@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <title>
+      Tristan Boyar Coin Archive
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Tristan Boyar Coin Archive">
+    <meta name="author" content="Tristan Boyar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style-countrypage.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("Input");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("CountryTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("CountryTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="sitename">
+        <a href="./index.html">tristan boyar coin archive</a>
+      </div>
+      <div class="menuitem">
+        <a href="./add.html"><i class="material-icons md-48">add_box</i></a>
+      </div>
+      <div class="menuitem">
+        <a href="./listbycountry.html"><i class="material-icons md-48">list</i></a>
+      </div>
+      <div class="menuitem">
+        <a href="./about.html"><i class="material-icons md-48">info</i></a>
+        </div>
+      <div class="menuitem">
+          <a href="./index.html"><i class="material-icons md-48">home</i></a>
+        </div>
+    </header>
+
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div class="subsubtitle">
+          Coins Sorted By Country
+        </div>
+
+        <div class="sortandsearch">
+
+        <span><input type="text" id="Input" onkeyup="myFunction()" placeholder="Search..." title="Country Name"><button onclick="sortTable()">Sort Alphabetically</button></span>
+        </div>
+
+<div class="tablewithscroll">
+  <table id="CountryTable">
+    <tr class="header">
+      <th style="width:60%;"></th>
+      <th style="width:40%;"></th>
+    </tr>
+<tr><td>Argentina</td><td><a href="./countrypages/AR.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/640px-Flag_of_Argentina.svg.png"></a></td></tr>
+<tr><td>Austria</td><td><a href="./countrypages/AT.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/640px-Flag_of_Austria.svg.png"></a></td></tr>
+<tr><td>Australia</td><td><a href="./countrypages/AU.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/640px-Flag_of_Australia_%28converted%29.svg.png"></a></td></tr>
+<tr><td>Belgium</td><td><a href="./countrypages/BE.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/640px-Flag_of_Belgium.svg.png"></a></td></tr>
+<tr><td>Bolivia</td><td><a href="./countrypages/BO.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_Bolivia_%28state%29.svg/640px-Flag_of_Bolivia_%28state%29.svg.png"></a></td></tr>
+<tr><td>Brazil</td><td><a href="./countrypages/BR.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png"></a></td></tr>
+<tr><td>Canada</td><td><a href="./countrypages/CA.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/640px-Flag_of_Canada_%28Pantone%29.svg.png"></a></td></tr>
+<tr><td>Colombia</td><td><a href="./countrypages/CO.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/640px-Flag_of_Colombia.svg.png"></a></td></tr>
+<tr><td>Cuba</td><td><a href="./countrypages/CU.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/640px-Flag_of_Cuba.svg.png"></a></td></tr>
+<tr><td>Germany</td><td><a href="./countrypages/DE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/640px-Flag_of_Germany.svg.png"></a></td></tr>
+<tr><td>Spain</td><td><a href="./countrypages/ES.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/640px-Bandera_de_Espa%C3%B1a.svg.png"></a></td></tr>
+<tr><td>Spanish Colonies</td><td><a href="./countrypages/ES-COL.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_Cross_of_Burgundy.svg/250px-Flag_of_Cross_of_Burgundy.svg.png"></a></td></tr>
+<tr><td>France</td><td><a href="./countrypages/FR.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/640px-Flag_of_France.svg.png"></a></td></tr>
+<tr><td>French Colonies</td><td><a href="./countrypages/FR-COL.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Royal_Standard_of_the_King_of_France.svg/250px-Royal_Standard_of_the_King_of_France.svg.png"></a></td></tr>
+<tr><td>United Kingdom</td><td><a href="./countrypages/GB.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/640px-Flag_of_the_United_Kingdom.svg.png"></a></td></tr>
+<tr><td>British Colonies</td><td><a href="./countrypages/GB-COL.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Naval_Ensign_of_the_United_Kingdom.svg/420px-Naval_Ensign_of_the_United_Kingdom.svg.png"></a></td></tr>
+<tr><td>Guatemala</td><td><a href="./countrypages/GT.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/640px-Flag_of_Guatemala.svg.png"></a></td></tr>
+<tr><td>Ireland</td><td><a href="./countrypages/IE.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/640px-Flag_of_Ireland.svg.png"></a></td></tr>
+<tr><td>India</td><td><a href="./countrypages/IN.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/640px-Flag_of_India.svg.png"></a></td></tr>
+<tr><td>Iran</td><td><a href="./countrypages/IR.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/640px-Flag_of_Iran.svg.png"></a></td></tr>
+<tr><td>Italy</td><td><a href="./countrypages/IT.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/640px-Flag_of_Italy.svg.png"></a></td></tr>
+<tr><td>Luxembourg</td><td><a href="./countrypages/LU.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/640px-Flag_of_Luxembourg.svg.png"></a></td></tr>
+<tr><td>Mexico</td><td><a href="./countrypages/MX.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/640px-Flag_of_Mexico.svg.png"></a></td></tr>
+<tr><td>Ottoman Empire</td><td><a href="./countrypages/OTT.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg/440px-Flag_of_the_Ottoman_Empire_%281844%E2%80%931922%29.svg.png"></a></td></tr>
+<tr><td>Peru</td><td><a href="./countrypages/PE.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/640px-Flag_of_Peru.svg.png"></a></td></tr>
+<tr><td>Sweden</td><td><a href="./countrypages/SE.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/640px-Flag_of_Sweden.svg.png"></a></td></tr>
+<tr><td>United States of America</td><td><a href="./countrypages/US.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png"></a></td></tr>
+
+    </table>
+  </div>
+      </body>
+      </html>
