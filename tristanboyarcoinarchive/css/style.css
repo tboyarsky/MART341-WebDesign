@@ -17,7 +17,8 @@ body{
     min-height: 90vh;
   }
 
-.sitename {
+@media only screen and (min-width: 768px){
+    .sitename {
     color: #F9F8ED;
     margin-top: .5%;
     margin-left: 2%;
@@ -27,7 +28,11 @@ body{
     float: left;
     font-weight: bolder;
     font-size: 40px
-}
+    }}
+
+@media only screen and (max-width: 768px){
+    .sitename {font-size: 20px}}
+        
 
 .sitename a {
     color: #F9F8ED;
@@ -48,9 +53,11 @@ body{
     text-decoration: none;
 }
 
-.material-icons.md-48{
+@media only screen and (min-width: 768px){.material-icons.md-48{
   font-size: 48px;
-}
+    }}
+@media only screen and (max-width: 768px){
+    font-size: 20px;}}
 
 .material-icons.md-48:hover {
     color: #1D8C83;
