@@ -24,7 +24,8 @@ header {
     }}
 
 @media only screen and (max-width: 768px){
-    .sitename {font-size: 20px}}
+    .sitename {font-size: 20px;
+    color: #F9F8ED;}}
         
 
 .sitename a {
