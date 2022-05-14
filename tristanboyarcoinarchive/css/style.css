@@ -55,13 +55,14 @@ body{
 
 @media only screen and (min-width: 768px){.material-icons.md-48{
   font-size: 48px;
-    }}
-@media only screen and (max-width: 768px){
-    font-size: 20px;}}
-
+    }
 .material-icons.md-48:hover {
     color: #1D8C83;
-}
+}}
+@media only screen and (max-width: 768px){
+    font-size: 20px;}.material-icons.md-48:hover {
+    color: #1D8C83;
+}}
 
 .subsubtitle {
   font-family: Helvetica;
