@@ -1,0 +1,178 @@
+html {background-color: #F9F8ED}
+
+header {
+    position: absolute;
+    top: 0%;
+    background-color: #420705;
+    width: 100%;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.sitename {
+    color: #F9F8ED;
+    margin-top: .5%;
+    margin-left: 2%;
+    margin-right: 3%;
+    margin-bottom: .5%;
+    letter-spacing: normal;
+    float: left;
+    font-weight: bolder;
+    font-size: 4vw;
+}
+
+.sitename a {
+    color: #F9F8ED;
+    text-decoration: none;
+  }
+
+.menuitem {
+    display: inline-block;
+    margin-top: .5%;
+    margin-bottom: .5%
+    margin-left: 0;
+    margin-right: 3%;
+    float: right;
+}
+
+.menuitem a {
+    color: #F9F8ED;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px){
+.material-icons.md-48{
+  font-size: 6vw;
+}
+}
+@media only screen and (min-width: 768px){
+.material-icons.md-48{
+  font-size: 4vw;
+}
+}
+
+.material-icons.md-48:hover {
+    color: #1D8C83;
+}
+
+.material-icons.md-20{
+  font-size: 5vw;
+}
+.material-icons.md-30{
+  font-size: 4vw;
+}
+
+.subtitle {
+  padding-bottom: 1%;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 30px;
+  color: #420705;
+  text-align: center;
+  background-color: #F9F8ED;
+  margin-top: 1%;
+}
+
+.subtitle img{
+  height: 40px;
+  display: block-inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  border-color: #420705;
+  border-style: solid;
+  border-width: thin;
+  margin-top: 1%;
+
+}
+
+.subsubtitle {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Helvetica;
+  font-size: 10vw;
+  font-weight: bold;
+  color: #420705;
+  text-align: center;
+  background-color: #F9F8ED;
+}
+.subsubtitle img{
+  height: 60px;
+  display: inline-flex;
+  border-color: #420705;
+  border-style: solid;
+  border-width: thin;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#Input {
+  width: 75%;
+  font-size: 20px;
+  border-style: solid;
+  border-color: #420705;
+  font-family: Helvetica;
+}
+
+#CountryTable {
+  font-family: Helvetica;
+  font-size: 15px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: #420705;
+  margin-top: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #F9F8ED;
+}
+
+th {
+  background-color: #420705;
+  color: white;
+  text-align: center;
+}
+
+tr {
+  color: #420705;
+  text-align: center;
+}
+
+.sortandsearch {
+  width: 100%;
+}
+
+button {
+  width: 50%;
+  font-size: 20px;
+  border-style: solid;
+  border-color: #420705;
+  background-color: #fff;
+  font-family: Helvetica;
+  color: #420705;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+button:hover, button:active{
+  color: #fff;
+  background-color: #420705;
+}
+
+.numistanum {
+  font-family: Helvetica;
+  color: #420705;
+  font-size: 15px;
+  width: 100%;
+}
+
+.display {
+  color: red;
+}
