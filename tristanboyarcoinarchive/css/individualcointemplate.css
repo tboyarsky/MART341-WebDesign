@@ -1,4 +1,4 @@
-ul {
+@media only screen and (min-width: 768px){ul {
   background-color: #F9F8ED;
   list-style-type: none;
   font-family: Helvetica;
@@ -10,8 +10,21 @@ ul {
 li {
   margin-top: 5px;
   background-color: #fff;
+  }}
+@media only screen and (max-width: 768px){ul {
+  background-color: #F9F8ED;
+  list-style-type: none;
+  font-family: Helvetica;
+  color: #420705;
+  font-size: 16px;
+  margin-left: 1%;
+  margin-right:1%;
 }
 
+li {
+  margin-top: 5px;
+  background-color: #fff;
+  }}
 
 html {background-color: #F9F8ED}
 
