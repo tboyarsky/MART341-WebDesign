@@ -15,25 +15,36 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <script>
-    function displayNumistaNumber() {
-  document.getElementById("numistanumber").innerHTML = document.getElementById("numNum").value;
-}
-    </script>
+   <script>
+      function updateURLDisplayAndLink(url) {
+        var urlDisplay = document.getElementById("urlDisplay");
+        urlDisplay.innerHTML = url;
 
-    </head>
+        var link = document.getElementById("urlDisplay");
+        link.href = url; // Update the href attribute
+      }
+
+      function generateURL(serialNumber) {
+        return "https://tboyarsky.github.io/MART341-WebDesign/tristanboyarcoinarchive/coins/" + serialNumber + ".html";
+      }
+
+      function handleSerialNumberInput() {
+        var serialNumber = document.getElementById("serialNumber").value;
+        var generatedURL = generateURL(serialNumber);
+
+        updateURLDisplayAndLink(generatedURL);
+      }
 
 
-  <body>
+      </script>
+</head>
+<body>
+    <label for="serialNumber">Enter Serial Number:</label>
+    <input type="text" id="serialNumber">
+    <button onclick="handleSerialNumberInput()">Lookup</button>
+    <br>
+    <div id="output">URL: <a id="urlDisplay" target="_blank" href=""></a></div>
 
-    <div class="numistanum">
-      <span><b>Enter Serial Number:</b></span>
-      <input id="numNum" name="numNum" type="text" onkeyup="javascript:displayNumistaNumber()"/>
-      <br/>
-      <span>https://tboyarsky.github.io/MART341-WebDesign/tristanboyarcoinarchive/coins/</span><span class="display" id="numistanumber"></span><span>.html</span>
-    </div>
-
-
-    </body>
-
-    </html>
+    <script src="script.js"></script>
+</body>
+</html>
