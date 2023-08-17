@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <title>
+      Tristan Boyar Coin Archive
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Tristan Boyar Coin Archive">
+    <meta name="author" content="Tristan Boyar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style-countrypage.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("Input");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("CountryTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+function sortTable() {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("CountryTable");
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[0];
+      y = rows[i + 1].getElementsByTagName("TD")[0];
+      if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="sitename">
+        <a href="./index.html">tristan boyar coin archive</a>
+      </div>
+      <div class="menuitem">
+        <a href="./add.html"><i class="material-icons md-48">add_box</i></a>
+      </div>
+      <div class="menuitem">
+        <a href="./listbycountry.html"><i class="material-icons md-48">list</i></a>
+      </div>
+      <div class="menuitem">
+          <a href="./index.html"><i class="material-icons md-48">home</i></a>
+        </div>
+    </header>
+
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div class="subsubtitle">
+          North American Coins
+        </div>
+     <div class="subsubtitle">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Location_North_America.svg/440px-Location_North_America.svg.png">
+        </div>
+
+        <div class="sortandsearch">
+
+        <span><input type="text" id="Input" onkeyup="myFunction()" placeholder="Search..." title="Country Name"><button onclick="sortTable()">Sort A-Z</button></span>
+        </div>
+
+<div class="tablewithscroll">
+  <table id="CountryTable">
+    <tr class="header">
+      <th style="width:60%;"></th>
+      <th style="width:40%;"></th>
+    </tr>
+<tr><td>Canada</td><td><a href="./countrypages/ca.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/640px-Flag_of_Canada_%28Pantone%29.svg.png"></a></td></tr>
+<tr><td>Costa Rica</td><td><a href="./countrypages/cr.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/250px-Flag_of_Costa_Rica.svg.png"></a></td></tr>
+<tr><td>El Salvador</td><td><a href="./countrypages/sv.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/510px-Flag_of_El_Salvador.svg.png"></a></td></tr>
+<tr><td>Mexico</td><td><a href="./countrypages/mx.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/640px-Flag_of_Mexico.svg.png"></a></td></tr>
+<tr><td>United States of America</td><td><a href="./countrypages/us.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/640px-Flag_of_the_United_States.svg.png"></a></td></tr>
+    </table>
+  </div>
+      </body>
+      </html>
