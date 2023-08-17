@@ -12,7 +12,12 @@ header {
     font-family: Helvetica;
     font-size: 30px
 }
-
+body {
+  font-family: Helvetica;
+  color: #F9F8ED;
+  font-size: 16px
+}
+  
 @media only screen and (min-width: 768px){
     .sitename {
     color: #F9F8ED;
