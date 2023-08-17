@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <title>
+      Tristan Boyar Coin Archive
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Tristan Boyar Coin Archive">
+    <meta name="author" content="Tristan Boyar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style-lookup.css" type="text/css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script>
+    function displayNumistaNumber() {
+  document.getElementById("numistanumber").innerHTML = document.getElementById("numNum").value;
+}
+    </script>
+
+    </head>
+
+
+  <body>
+
+    <div class="numistanum">
+      <span><b>Enter Serial Number:</b></span>
+      <input id="numNum" name="numNum" type="text" onkeyup="javascript:displayNumistaNumber()"/>
+      <br/>
+      <span>https://tboyarsky.github.io/MART341-WebDesign/tristanboyarcoinarchive/coins/</span><span class="display" id="numistanumber"></span><span>.html</span>
+    </div>
+
+
+    </body>
+
+    </html>
